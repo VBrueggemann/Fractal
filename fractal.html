@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fractal</title>
+</head>
+<body style="margin: 0">
+    <div style="position: absolute; z-index: 10; margin: 20px">
+        <label>maxIter</label>
+        <input type="range" min="4" max="50" value="10" id="maxIter" onchange="render()">
+        <label>circ</label>
+        <input type="range" min="0.5" max="5" value="4" step="0.1" id="circ" onchange="render()">
+        <label>zoom</label>
+        <input type="range" min="0" max="2" value="1" step="0.01" id="zoom" onchange="render()">
+        <label>xoffset</label>
+        <input type="range" min="0" max="100" value="0" step="0.1" id="xoffset" onchange="render()">
+        <label>yoffset</label>
+        <input type="range" min="0" max="100" value="0" step="0.1" id="yoffset" onchange="render()">
+        <label>count</label>
+        <input type="range" min="1" max="200" value="20" step="1" id="count" onchange="render()">
+
+        <button onclick="shuffle()"> shuffle</button>
+        <div id="performance"></div>
+    </div>
+    <div style="position: absolute">
+        <canvas id="fractal" style="width: 100%;
+         /*filter: blur(1px)*/
+"> </canvas>
+    </div>
+
+</body>
+</html>
+<script src="fractal.js"></script>
